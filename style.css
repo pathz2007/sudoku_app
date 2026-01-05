@@ -1,0 +1,76 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f0f0f0;
+}
+
+h1 {
+    color: #333;
+}
+
+#sudoku-board {
+    display: grid;
+    grid-template-columns: repeat(9, 50px);
+    grid-template-rows: repeat(9, 50px);
+    border: 3px solid #333;
+    margin-bottom: 20px;
+}
+
+.cell {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #ccc;
+    text-align: center;
+    font-size: 24px;
+    box-sizing: border-box;
+}
+
+.cell input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    text-align: center;
+    font-size: 24px;
+    background-color: transparent;
+}
+
+.cell.fixed {
+    background-color: #eee;
+    font-weight: bold;
+}
+
+.cell:nth-child(3n) {
+    border-right: 2px solid #333;
+}
+
+.cell:nth-child(9n) {
+    border-right: none;
+}
+
+#sudoku-board .row:nth-child(3n) .cell {
+    border-bottom: 2px solid #333;
+}
+
+#sudoku-board .row:nth-child(9) .cell {
+    border-bottom: none;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+button:hover {
+    background-color: #f0f0f0;
+}
